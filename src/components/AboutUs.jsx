@@ -5,20 +5,20 @@ import { aboutUsIcon } from '../assets'
 
 const FeatureCard = ({ icon, title, content, index }) => (
 	<div
-		className={`flex flex-row p-6 md:mx-0 mx-5 rounded-[20px] items-start ${
+		className={`mx-5 flex flex-row items-start rounded-[20px] p-6 md:mx-0 ${
 			index !== features.length - 1 ? 'mb-6' : 'mb-0'
-		} hover:bg-blue-900 feature-card transition-all`}
+		} feature-card transition-all hover:bg-blue-900`}
 	>
 		<div
-			className={`w-[64px] h-[64px] rounded-full ${styles.flexCenter} bg-[#000e22]`}
+			className={`h-[64px] w-[64px] rounded-full ${styles.flexCenter} bg-[#000e22]`}
 		>
-			<img src={icon} alt='icon' className='w-[50%] h-[50%] object-contain' />
+			<img src={icon} alt='icon' className='h-[50%] w-[50%] object-contain' />
 		</div>
-		<div className='flex-1 flex flex-col ml-3'>
-			<h4 className='font-montserrat font-semibold text-white text-[18px] mb-1'>
+		<div className='ml-3 flex flex-1 flex-col'>
+			<h4 className='mb-1 font-montserrat text-[18px] font-semibold text-white'>
 				{title}
 			</h4>
-			<p className='font-montserrat font-normal text-dimWhite text-[16px] mb-1 min-w-fit lg:min-w-[620px] sm:min-w-[630px] ss:min-w-[480px] xs:min-w-[320px]'>
+			<p className='mb-1 min-w-fit font-montserrat text-[16px] font-normal text-dimWhite xs:min-w-[320px] ss:min-w-[480px] sm:min-w-[630px] lg:min-w-[620px]'>
 				{content}
 			</p>
 		</div>
@@ -30,9 +30,9 @@ const AboutUs = () => (
 		<div className={layout.sectionInfo}>
 			<div className='flex'>
 				<h2 className={styles.heading2}>Про нас</h2>
-				<img src={aboutUsIcon} alt='icon' className='ml-[15px] w-[60px] mt-1' />
+				<img src={aboutUsIcon} alt='icon' className='ml-[15px] mt-1 w-[60px]' />
 			</div>
-			<p className={`${styles.paragraph} sm:max-w-[500px] mt-5`}>
+			<p className={`${styles.paragraph} mt-5 sm:max-w-[500px]`}>
 				Более подробно о нашем проекте вы можете узнать в разделе —{' '}
 				<a href='#faq' className='text-indigo-400 '>
 					{' '}

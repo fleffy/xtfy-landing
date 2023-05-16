@@ -7,19 +7,19 @@ import { reccomendationsIcon } from '../assets'
 const Recommendations = () => (
 	<section
 		id='partners'
-		className={`${styles.paddingY} flex-col relative my-[60px]`}
+		className={`${styles.paddingY} relative my-[60px] flex-col`}
 	>
-		<div className='flex justify-start mb-[100px]'>
+		<div className='mb-[100px] flex justify-start'>
 			<h2 className={`${styles.heading2} max-w-fit`}>Партнеры</h2>
 			<img
 				src={reccomendationsIcon}
 				alt='icon'
-				className='ml-[25px] w-[60px] mt-1'
+				className='ml-[25px] mt-1 w-[60px]'
 			/>
 		</div>
 
 		<div
-			className={`flex flex-wrap justify-center w-full recommendations-container relative z-[1]`}
+			className={`recommendations-container relative z-[1] flex w-full flex-wrap justify-center`}
 		>
 			{recommendations.map((card) => (
 				<RecommendationCard key={card.id} {...card} />

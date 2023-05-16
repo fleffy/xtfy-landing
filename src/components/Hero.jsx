@@ -6,51 +6,51 @@ import styles from '../style'
 
 const Hero = () => (
 	<div>
-		<div className='z-30 relative'>
+		<div className='relative z-30'>
 			<Navbar />
 		</div>
 
-		<section className={`z-[20] relative flex md:flex-row flex-col mb-[50px]`}>
-			<div className='flex flex-row justify-between items-center w-full'>
+		<section className={`relative z-[20] mb-[50px] flex flex-col md:flex-row`}>
+			<div className='flex w-full flex-row items-center justify-between'>
 				<div>
-					<h1 className='my-4 flex-1 font-montserrat font-semibold ss:text-[62px] text-[52px] text-white ss:leading-[100px] leading-[75px]'>
+					<h1 className='my-4 flex-1 font-montserrat text-[52px] font-semibold leading-[75px] text-white ss:text-[62px] ss:leading-[100px]'>
 						Набор открыт!
 					</h1>
-					<p className={`${styles.paragraph} max-w-[450px] mt-5`}>
+					<p className={`${styles.paragraph} mt-5 max-w-[450px]`}>
 						Мы открываем набор на оплачиваемое событие в игре Sandbox
 					</p>
 					<a href='#aboutus'>
-						<button className='min-w-[180px] min-h-[55px] bg-primary font-montserrat text-white font-bold py-2 px-4 rounded-[16px] mt-12'>
+						<button className='mt-12 min-h-[55px] min-w-[180px] rounded-[16px] bg-primary px-4 py-2 font-montserrat font-bold text-white'>
 							Узнать больше
 						</button>
 					</a>
 					<a href='#start'>
-						<button className='md:w-[220px] w-[120px]  min-h-[53px] bg-transparent font-montserrat hover:bg-primary text-white font-semibold hover:text-white py-2 px-4 border-2 border-white hover:border-transparent rounded-[16px] ml-5 transition-all relative'>
+						<button className='relative ml-5  min-h-[53px] w-[120px] rounded-[16px] border-2 border-white bg-transparent px-4 py-2 font-montserrat font-semibold text-white transition-all hover:border-transparent hover:bg-primary hover:text-white md:w-[220px]'>
 							<img
 								src={play}
-								className='absolute pt-[5px] pl-11 md:block hidden'
+								className='absolute hidden pl-11 pt-[5px] md:block'
 							/>
 							Играть
 						</button>
 					</a>
 				</div>
 			</div>
-			<div className='w-[100%] h-[100%]'>
+			<div className='h-[100%] w-[100%]'>
 				<img
 					src={gamepad}
-					className='xl:block md:block hidden hover:scale-[0.97] transition-all'
+					className='hidden transition-all hover:scale-[0.97] md:block xl:block'
 				/>
 			</div>
 
-			<div className='absolute z-[3] -left-1/2 top-0 w-[50%] h-[50%] rounded-full white__gradient' />
-			<div className='absolute z-[0] -left-1/2 bottom-0 w-[40%] h-[50%] rounded-full pink__gradient' />
+			<div className='white__gradient absolute -left-1/2 top-0 z-[3] h-[50%] w-[50%] rounded-full' />
+			<div className='pink__gradient absolute -left-1/2 bottom-0 z-[0] h-[50%] w-[40%] rounded-full' />
 		</section>
 		<div className={`relative ${styles.flexCenter} pt-20 sm:pt-[150px] `}>
 			<a href='#aboutus'>
 				<img
 					src={arrowDown}
 					alt='arrow'
-					className='cursor-pointer animate-bounce-slow'
+					className='animate-bounce-slow cursor-pointer'
 				/>
 			</a>
 		</div>
