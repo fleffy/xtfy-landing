@@ -27,7 +27,9 @@ const FeatureCard = ({ icon, title, content, index }) => (
 
 const AboutUs = () => (
 	<section id='aboutus' className={`${layout.section}`}>
-		<div className={layout.sectionInfo}>
+		<div
+			className={`${layout.sectionInfo} animate-in fade-in-5 slide-in-from-left-6 duration-2000`}
+		>
 			<div className='flex'>
 				<h2 className={styles.heading2}>Про нас</h2>
 				<img src={aboutUsIcon} alt='icon' className='ml-[15px] mt-1 w-[60px]' />
@@ -41,7 +43,9 @@ const AboutUs = () => (
 			</p>
 		</div>
 
-		<div className={`${layout.sectionImg} flex-col`}>
+		<div
+			className={`${layout.sectionImg} flex-col justify-between animate-in fade-in-5 slide-in-from-right-6 duration-2000`}
+		>
 			{features.map((feature, index) => (
 				<FeatureCard key={feature.id} {...feature} index={index} />
 			))}

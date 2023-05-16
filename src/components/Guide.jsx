@@ -8,7 +8,7 @@ const Guide = () => (
 		className={`${layout.sectionReverse} mb-[50px] mt-[50px]`}
 	>
 		<div
-			className={`${layout.sectionImgReverse} xxxs:w-[330px] xxs:w-[365px] xs:w-[420px] sm:h-[405px] sm:w-[720px]`}
+			className={`${layout.sectionImgReverse} animate-in fade-in-5 slide-in-from-left-6 duration-2000 xxxs:w-[330px] xxs:w-[365px] xs:w-[420px] sm:h-[405px] sm:w-[720px] md:pt-10`}
 		>
 			<iframe
 				width='720px'
@@ -19,10 +19,12 @@ const Guide = () => (
 				className='rounded-3xl'
 			></iframe>
 		</div>
-		<div className={`${layout.sectionInfo} ml-5 text-white`}>
-			<div className='flex'>
-				<h2 className={`${styles.heading2} xxxs:text-[26px]`}>Ознакомление</h2>
-				<img src={guideIcon} alt='icon' className='ml-[15px] mt-1 w-[60px]' />
+		<div
+			className={`${layout.sectionInfo} ml-5 text-white animate-in fade-in-5 slide-in-from-right-6 duration-2000`}
+		>
+			<div className='max-w-auto flex gap-3'>
+				<h2 className={`${styles.heading2}`}>Обучение</h2>
+				<img src={guideIcon} alt='icon' className='mt-1 w-[60px]' />
 			</div>
 			<p className={`${styles.paragraph} mt-5 max-w-[700px]`}>
 				В данном видеоролике затронуты все основные темы на которые у вас могли

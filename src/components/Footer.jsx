@@ -4,28 +4,30 @@ import { logo } from '../assets'
 import { socialMedia } from '../constants'
 
 const Footer = () => (
-	<section className={`${styles.flexCenter} ${styles.paddingY} flex-col`}>
-		<div className={`${styles.flexCenter} md:flex-row flex-col mb-8 w-full`}>
+	<section
+		className={`${styles.flexCenter} ${styles.paddingY} flex-col animate-in fade-in-5 slide-in-from-bottom-6 duration-1500`}
+	>
+		<div className={`${styles.flexCenter} mb-8 w-full flex-col md:flex-row`}>
 			<img
 				src={logo}
 				alt='logo'
-				className='h-[72px] object-contain cursor-pointer'
+				className='h-[72px] cursor-pointer object-contain'
 			/>
 		</div>
 
-		<div className='w-full flex justify-between items-center md:flex-row flex-col pt-6 border-t-[1px] border-t-[#3f3y45]'>
-			<p className='font-montserrat font-normal text-center text-[18px] leading-[27px] text-dimWhite'>
-				Copyright © 2022 xtfy. All Rights Reserved.
+		<div className='flex w-full flex-col items-center justify-between border-t-[1px] border-t-[#3f3y45] pt-6 md:flex-row'>
+			<p className='text-center font-montserrat text-[18px] font-normal leading-[27px] text-dimWhite'>
+				Copyright © 2022 - 2023 xtfy. All Rights Reserved.
 			</p>
 
-			<div className='flex flex-row md:mt-0 mt-6'>
+			<div className='mt-6 flex flex-row md:mt-0'>
 				{socialMedia.map((social, index) => (
-					<a href={social.link} target='_blank'>
+					<a href={social.link} target='_blank' key={index}>
 						<img
 							key={social.id}
 							src={social.icon}
 							alt={social.id}
-							className={`w-[21px] h-[21px] object-contain cursor-pointer ${
+							className={`h-[21px] w-[21px] cursor-pointer object-contain ${
 								index !== socialMedia.length - 1 ? 'mr-6' : 'mr-0'
 							}`}
 						/>

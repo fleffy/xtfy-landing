@@ -12,7 +12,7 @@ const FaqCard = ({ question, answer }) => {
 	return (
 		<div
 			onClick={() => setExpand(!expand)}
-			className='mb-6 cursor-pointer rounded border border-t-0 border-indigo-500 shadow'
+			className='mb-6 cursor-pointer rounded border border-t-0 border-indigo-500 shadow animate-in fade-in-5 slide-in-from-bottom-6 duration-2000'
 		>
 			<div className='relative p-4 font-montserrat text-xl font-medium text-white'>
 				<div className='w-5/6'>{question}</div>
@@ -25,7 +25,7 @@ const FaqCard = ({ question, answer }) => {
 				</button>
 			</div>
 			<p
-				className={`${answerClass} ${styles.paragraph} text-[15px] text-white`}
+				className={`${answerClass} ${styles.paragraph} text-[15px] text-white animate-in fade-in-5 slide-in-from-top-4 duration-1000`}
 			>
 				{answer}
 			</p>
@@ -35,7 +35,7 @@ const FaqCard = ({ question, answer }) => {
 
 const FAQ = () => (
 	<section id='faq' className='mb-[180px] mt-[100px] transition-transform'>
-		<div className='mb-[100px] flex justify-center md:justify-start'>
+		<div className='mb-[100px] flex justify-center animate-in fade-in-5 slide-in-from-left-6 duration-2000 md:justify-start'>
 			<h2 className={`${styles.heading2} max-w-fit`}>Ответы на вопросы</h2>
 			<img src={FAQIcon} alt='icon' className='ml-[25px] mt-2 w-[60px]' />
 		</div>
